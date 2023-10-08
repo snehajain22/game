@@ -127,7 +127,7 @@ button:hover{
     }
     
     #panel{
-        width: 95vw;
+        width: 90vw;
         height: 30vh;
     }
     #ptop{
@@ -136,8 +136,8 @@ button:hover{
     }
     .bubble{
         font-size: 2vw;
-        width: 6vw;
-        height: 6vw;
+        width: 7vw;
+        height: 7vw;
     }
     #ptop .elem{
         gap:2vw;
