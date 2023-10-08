@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#popup{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#message{
+    color: white;
+    width: 30vw;
+    height: 25vh;
+    background-color:black;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1vw;
+    font-size: 3.5vw;
+    font-weight: 700;
+}
+button{
+    padding: 5px 10px;
+    border: none;
+    font-weight: 600;
+    color:white;
+    background-color: red;
+}
+button:hover{
+    color:white;
+    background-color: rgb(146, 2, 2);
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(207, 229, 237);
+}
+#panel{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#ptop{
+    padding: 0 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    background-color:rgb(126, 145, 153);
+}
+#ptop .elem{
+    display: flex;
+    align-items: center;
+    gap:2vw;
+    color: white;
+    font-size: 1vw;
+}
+#ptop .box{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0.5vw;
+    color: rgb(126, 145, 153);
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+#pbtm{
+    width: 100%;
+    padding: 1vw;
+    height: calc(80vh - 8vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.bubble{
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5vw;
+    height: 3.5vw;
+    border-radius: 50%;
+    background-color: skyblue;
+    cursor: pointer;
+}
+.bubble:hover{
+    background-color: rgb(194, 198, 202);
+}
+
+@media (max-width:600px) {
+    
+    #message{
+        width: 50vw;
+        height: 15vh;
+        border-radius: 2vw;    
+        gap:2vw;
+        font-size: 5vw;
+        font-weight: 600;
+    }
+    button{
+        padding: 3px 8px;
+    }
+    
+    #panel{
+        width: 95vw;
+        height: 30vh;
+    }
+    #ptop{
+        width: 100%;
+        height: 4vh;
+    }
+    .bubble{
+        font-size: 2vw;
+        width: 6vw;
+        height: 6vw;
+    }
+    #ptop .elem{
+        gap:2vw;
+        font-size: 2vw;
+    }
+    #ptop .box{
+        border-radius: 2px;
+        padding: 1vw;
+        font-weight: 600;
+        font-size: 2vw;
+    }
+
+}
