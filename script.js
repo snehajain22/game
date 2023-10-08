@@ -33,11 +33,15 @@ function increase_score(){
 
 function addingbubbles(){
     let pbtm = document.querySelector("#pbtm");
-    // let bsize = 60;
-    // let bsize = 60;
-    const bsize = window.innerWidth * 0.035;
+    let bsize, gap;
+    if (window.innerWidth <= 600) {
+        bsize = pbtm.offsetWidth * 0.07; // 7vw 
+        gap = pbtm.offsetWidth * 0.02; // 2vw 
+    } else {
+        bsize = pbtm.offsetWidth * 0.035;
+        gap = pbtm.offsetWidth * 0.01;
+    }
 
-    const gap =window.innerWidth * 0.01;
     // Calculate padding. Assuming 1vw padding is equal to 1% of viewport width.
     const paddingHorizontal = window.innerWidth * 0.01;  // 1vw
     const paddingVertical = window.innerHeight * 0.01;  // 1vw
@@ -45,10 +49,9 @@ function addingbubbles(){
     const availableWidth = pbtm.offsetWidth - 2 * paddingHorizontal;  // subtracting padding from both sides
     const availableHeight = pbtm.offsetHeight - 2 * paddingVertical;  // subtracting padding from top and bottom
 
-    const bubbleshorizontally = Math.floor((availableWidth - gap)/(bsize+gap));
-    const bubblesvertically = Math.floor((availableHeight - gap)/(bsize+gap));
+    const bubbleshorizontally = Math.floor((availableWidth)/(bsize+gap));
+    const bubblesvertically = Math.floor((availableHeight)/(bsize+gap));
     const totallb = bubbleshorizontally * bubblesvertically;
-
 
     let clutter="";
 
@@ -57,6 +60,9 @@ function addingbubbles(){
         clutter+=`<div class="bubble">${rn}</div>`
     }
     pbtm.innerHTML = clutter;
+
+    
+
 }
 
 function runtimer(){
@@ -84,7 +90,7 @@ function close(){
         window.location.reload();
     })
 }
-
+window.addEventListener('resize', addingbubbles);
 addingbubbles();
 runtimer();
 gethitvalue();
