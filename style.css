@@ -90,7 +90,7 @@ button:hover{
     box-sizing: border-box;
     width: 100%;
     padding: 1vw;
-    height: calc(80vh - 7vh);
+    height: calc(78.8vh - 7vh);
     display: flex;
     justify-content: center;
     gap: 1vw;
